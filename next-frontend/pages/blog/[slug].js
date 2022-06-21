@@ -9,7 +9,16 @@ import Script from "next/script";
 import { useEffect } from "react";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
+import { AiFillGithub } from "react-icons/ai";
+
 const Post = ({ blog, data }) => {
+  const client = createClient({
+    projectId: "89683gbm",
+    dataset: "production",
+    useCdn: false,
+  });
+  const builder = imageUrlBuilder(client);
+  console.log(data[0].name)
   const router = useRouter();
 
   return (
@@ -112,14 +121,14 @@ const Post = ({ blog, data }) => {
                 <div className="flex items-center pt-5 md:pt-10">
                   <div>
                     <img
-                      src="/assets/img/blog-author.jpg"
-                      className="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
+                      src={builder.image(data[0].image)}
+                      className="h-20 w-20 rounded-full border-2 border-grey-70 shadow border-purple-700"
                       alt="author image"
                     />
                   </div>
                   <div className="pl-5">
-                    <span className="block font-body text-xl font-bold text-grey-10">
-                      By Prajwal Ladkat
+                    <span className="block font-body text-xl font-bold text-black font-bold">
+                      By {data[0].name}
                     </span>
                     <span className="block pt-1 font-body text-xl font-bold text-grey-30">
                       {blog.createdAt}
@@ -157,37 +166,37 @@ const Post = ({ blog, data }) => {
                   <i className="bx bx-right-arrow-alt text-2xl text-primary"></i>
                 </a>
               </div>
-              <div className="flex flex-col items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
+              <div className="flex flex-col items-center shadow-lg  px-5 rounded-lg  border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
                 <div className="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
                   <img
-                    src="/assets/img/blog-author.jpg"
-                    className="rounded-full shadow"
+                    src={builder.image(data[0].image).width(300)}
+                    className="rounded-full shadow-lg border-solid border-2 border-purple-700"
                     alt="author image"
                   />
                 </div>
-                <div className="ml-0 text-center md:ml-10 md:w-5/6 md:text-left">
+                <div className="ml-0 text-center md:ml-10 md:w-5/6 md:text-left ">
                   <h3 className="pt-10 font-body text-2xl font-bold text-secondary md:pt-0">
-              
+                    {data[0].name}
                   </h3>
                   <p className="pt-5 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
-                  
+                    {data[0].description}
                   </p>
                   <div className="flex items-center justify-center pt-5 md:justify-start">
-                    <a href="/">
-                      <i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i className="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
-                    </a>
+                  <a href={data[0].githubLink}>
+                    <AiFillGithub className="text-2xl text-black hover:text-blue-500 duration-300 ease-linear"/>
+                  </a>
+                  <a href={data[0].twitterLink} className="pl-4">
+                    <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                  </a>
+                  <a href="/" className="pl-4">
+                    <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                  </a>
+                  <a href={data[0].linkedinLink} className="pl-4">
+                    <i className="bx bxl-linkedin text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                  </a>
+                  <a href={data[0].instagramLink} className="pl-4">
+                    <i className="bx bxl-instagram text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                  </a>
                   </div>
                 </div>
               </div>
@@ -212,6 +221,7 @@ export const getServerSideProps = async (context) => {
   });
   const query = `*[_type == "blog" && slug.current == "${slug}"][0]`;
   const query2 = `*[_type == "data"]`;
+  const builder = imageUrlBuilder(client);
 
   const blog = await client.fetch(query);
   const data = await client.fetch(query2);

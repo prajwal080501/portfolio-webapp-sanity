@@ -32,7 +32,7 @@ const Hero = ({ data, builder }) => {
               whileHover={{ scale: 1.1, duration: 0.2 }}
               className="rounded-full border-8 border-white shadow-xl hover:scale-110 duration-100 ease-linear  cursor-pointer">
               <motion.img
-                initial={{ scale: 2, x: 250 , zIndex: 1}}
+                initial={{ scale: 2, x: 250, zIndex: 1 }}
                 animate={{ rotate: 360, scale: 1, x: 0, zIndex: -1 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 src={builder.image(data[0].image).width(300)}
@@ -41,20 +41,24 @@ const Hero = ({ data, builder }) => {
               />
             </motion.div>
             <div className="pt-8  sm:pt-10 lg:pl-8 lg:pt-0">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1 , x: 0 }} 
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 2, delay: 0.5 }}
-              className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
-                Hello I'm {
-                  data[0].name
-                }
+                className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
+                Hello I'm
+                <motion.span
+                  initial={{ opacity: 0, x: -100, fontStyle:"normal" }}
+                  animate={{ opacity: 1, x: 0, fontStyle:"bold" }}
+                  transition={{ duration: 2, delay: 0.5 }}
+                 className="font-bold text-yellow-400"> {data[0].name}</motion.span>
+
               </motion.h1>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1 , x: 0 }}
-                transition={{ duration: 2, delay: 0.5 }}
-              className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2, delay: 0.5, type: "spring" }}
+                className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
                 <div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
                   <p className="font-body text-lg uppercase text-white">
                     Let's connect
@@ -67,7 +71,7 @@ const Hero = ({ data, builder }) => {
                   <motion.a
                     inital={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration:1, delay: 2 }}
+                    transition={{ duration: 1, delay: 2 }}
                     href={data[0].githubLink}>
                     <AiFillGithub className="text-2xl text-white hover:text-yellow" />
                   </motion.a>
@@ -81,21 +85,21 @@ const Hero = ({ data, builder }) => {
                   <motion.a
                     inital={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 , delay: 2}}
+                    transition={{ duration: 0.5, delay: 2 }}
                     href="/" className="pl-4">
                     <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
                   </motion.a>
                   <motion.a
-                    inital={{ x: -100, opacity: 0 , zIndex: -1}}
-                    animate={{ x: 0, opacity: 1 , zIndex: 1}}
-                    transition={{ duration: 0.5 , delay: 2}}
+                    inital={{ x: -100, opacity: 0, zIndex: -1 }}
+                    animate={{ x: 0, opacity: 1, zIndex: 1 }}
+                    transition={{ duration: 0.5, delay: 2 }}
                     href={data[0].linkedinLink} className="pl-4">
                     <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
                   </motion.a>
                   <motion.a
                     inital={{ x: -200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 2}}
+                    transition={{ duration: 0.5, delay: 2 }}
                     href={data[0].instagramLink} className="pl-4">
                     <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
                   </motion.a>
