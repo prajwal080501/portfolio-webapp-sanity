@@ -9,7 +9,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
-const Post = ({ blog, info }) => {
+const Post = ({ blog, data }) => {
   const router = useRouter();
 
   return (
@@ -119,7 +119,7 @@ const Post = ({ blog, info }) => {
                   </div>
                   <div className="pl-5">
                     <span className="block font-body text-xl font-bold text-grey-10">
-                      By Christy Smith
+                      By Prajwal Ladkat
                     </span>
                     <span className="block pt-1 font-body text-xl font-bold text-grey-30">
                       {blog.createdAt}
@@ -131,7 +131,7 @@ const Post = ({ blog, info }) => {
                 <PortableText
                   // Pass in block content straight from Sanity.io
                   content={blog.content}
-                  projectId="iytovi01"
+                  projectId="89683gbm"
                   dataset="production"
                   // Optionally override marks, decorators, blocks, etc. in a flat
                   // structure without doing any gymnastics
@@ -167,10 +167,10 @@ const Post = ({ blog, info }) => {
                 </div>
                 <div className="ml-0 text-center md:ml-10 md:w-5/6 md:text-left">
                   <h3 className="pt-10 font-body text-2xl font-bold text-secondary md:pt-0">
-                    {info.name}
+              
                   </h3>
                   <p className="pt-5 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
-                    {info.description}
+                  
                   </p>
                   <div className="flex items-center justify-center pt-5 md:justify-start">
                     <a href="/">
@@ -214,11 +214,11 @@ export const getServerSideProps = async (context) => {
   const query2 = `*[_type == "data"]`;
 
   const blog = await client.fetch(query);
-  const info = await client.fetch(query2);
+  const data = await client.fetch(query2);
   return {
     props: {
       blog,
-      info,
+      data,
     },
   };
 };

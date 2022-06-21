@@ -18,6 +18,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
+import BackTop from "../components/BackTop";
 
 export default function Home({ blogs, data }) {
   const client = createClient({
@@ -46,7 +47,7 @@ export default function Home({ blogs, data }) {
             name="viewport"
           />
 
-          <title>Homepage | Atom Template</title>
+          <title>Homepage | {data[0].name}</title>
 
           <meta property="og:title" content="Homepage | Atom Template" />
 
@@ -112,7 +113,7 @@ export default function Home({ blogs, data }) {
             src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
           ></script>
         </Head>
-        <Navbar />
+        <Navbar data={data[0]} />
       </>
       <>
         <div>
@@ -124,10 +125,10 @@ export default function Home({ blogs, data }) {
           <Clients />
           <Experience />
           <Stats />
-          <BlogSection data={data} blogs={blogs} builder={builder} />
-          <Contact />
+          <BlogSection data={data[0]} blogs={blogs} builder={builder} />
+          <Contact data={data}/>
         </div>
-        <Footer />
+        <Footer data={data} />
       </>
     </>
   );

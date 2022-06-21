@@ -26,7 +26,7 @@ const Blogs = ({ blogs }) => {
       <Navbar />
       <div>
         <div className="bg-grey-50 my-16" id="blog">
-          <div className="container mx-auto py-16 md:py-10">
+          <div className="container mx-auto py-16 md:py-10 p-10">
             <h3 className="text-center font-header text-sm font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
               I also like to write
             </h3>

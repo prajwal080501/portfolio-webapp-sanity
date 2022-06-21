@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({data}) => {
   return (
     <div>
         
         <div className="container py-16 md:py-20" id="contact">
-            <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            <h2 className="text-center font-header text-4xl font-semibold  uppercase text-primary sm:text-5xl lg:text-6xl">
               Here's a contact form
             </h2>
             <h4 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
@@ -19,7 +19,7 @@ const Contact = () => {
                 lobortis fermentum accumsan.
               </p>
             </div>
-            <form className="mx-auto w-full pt-10 sm:w-3/4">
+            <form href="mailto:praju.ladkat@gmail.com" className="mx-auto w-full pt-10 sm:w-3/4">
               <div className="flex flex-col md:flex-row">
                 <input
                   className="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
@@ -46,30 +46,30 @@ const Contact = () => {
                 <i className="bx bx-chevron-right relative -right-2 text-3xl"></i>
               </button>
             </form>
-            <div className="flex flex-col pt-16 lg:flex-row">
-              <div className="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3">
+            <div className="rounded-2xl shadow flex flex-col pt-16 lg:flex-row ">
+              <div className="w-full px-6 py-3 sm:py-8 lg:w-1/3">
                 <div className="flex items-center">
                   <i className="bx bx-phone text-2xl text-grey-40"></i>
                   <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
                     My Phone
                   </p>
                 </div>
-                <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-                  (+881) 111 222 333
-                </p>
+                <a href="tel:+919834477319" className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+                  {data[0].mobileNo}
+                </a>
               </div>
-              <div className="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
+              <div className="w-full  px-6 py-3 sm:py-8 lg:w-1/3">
                 <div className="flex items-center">
                   <i className="bx bx-envelope text-2xl text-grey-40"></i>
                   <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
                     My Email
                   </p>
                 </div>
-                <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-                  name@mydomain.com
-                </p>
+                <a href='mailto:praju.ladkat@gmail.com' className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+                  {data[0].email}
+                </a>
               </div>
-              <div className="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
+              <div className="w-full  px-6 py-3 sm:py-8 lg:w-1/3">
                 <div className="flex items-center">
                   <i className="bx bx-map text-2xl text-grey-40"></i>
                   <p className="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
@@ -77,16 +77,18 @@ const Contact = () => {
                   </p>
                 </div>
                 <p className="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-                  123 New York D Block 1100, 2011 USA
+                  {data[0].address}
                 </p>
               </div>
             </div>
           </div>
 
           <div
-            className="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96"
-            style={{ backgroundImage: "url(/assets/img/map.png)" }}
-          ></div>
+            className="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96  p-2 mb-3 ml-3 mr-3 rounded-xl shadow-lg"
+            
+          >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.274981308778!2d73.90661341457812!3d18.561637572762173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13ee7d72457%3A0x6a219f2c38e4a8e3!2sSakore%20Nagar%2C%20Viman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1655735878499!5m2!1sen!2sin" className='w-full h-full' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
 
           <div
             className="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24"
