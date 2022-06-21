@@ -20,7 +20,7 @@ import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
 import BackTop from "../components/BackTop";
 
-export default function Home({ blogs, data }) {
+export default function Home({ blogs, data, skills }) {
   const client = createClient({
     projectId: "89683gbm",
     dataset: "production",
@@ -119,7 +119,7 @@ export default function Home({ blogs, data }) {
         <div>
           <Hero data={data} builder={builder} />
           <About data={data} />
-          <Skills />
+          <Skills skills={skills} builder={builder} />
           <Projects />
 
           <Clients />
@@ -142,12 +142,16 @@ export async function getServerSideProps(context) {
   });
   const query = `*[_type == "blog"][0...3]`;
   const query2 = `*[_type == "data"]`;
+  const query3 = `*[_type == "skills"]`;
+
   const blogs = await client.fetch(query);
   const data = await client.fetch(query2);
+  const skills = await client.fetch(query3);
   return {
     props: {
       blogs,
       data,
+      skills,
     },
   };
 }

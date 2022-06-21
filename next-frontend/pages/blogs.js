@@ -7,6 +7,7 @@ import PortableText from "react-portable-text";
 import Script from "next/script";
 import { useEffect } from "react";
 import imageUrlBuilder from "@sanity/image-url";
+import { motion } from "framer-motion"
 
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -25,7 +26,11 @@ const Blogs = ({ blogs }) => {
     <>
       <Navbar />
       <div>
-        <div className="bg-grey-50 my-16" id="blog">
+        <motion.div 
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y:0}}
+        transition={{ duration: 0.5 }}
+        className="bg-grey-50 my-20" id="blog">
           <div className="container mx-auto py-16 md:py-10 p-10">
             <h3 className="text-center font-header text-sm font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
               I also like to write
@@ -72,7 +77,7 @@ const Blogs = ({ blogs }) => {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
