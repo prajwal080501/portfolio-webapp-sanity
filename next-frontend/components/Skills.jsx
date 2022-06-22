@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import imageUrlBuilder from "@sanity/image-url";
-import { Projects } from '../pages/Data/Data';
 
 const Skills = ({ skills, builder }) => {
   return (

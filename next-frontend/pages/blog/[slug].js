@@ -9,7 +9,6 @@ import Script from "next/script";
 import { useEffect } from "react";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
-import { AiFillGithub } from "react-icons/ai";
 
 const Post = ({ blog, data }) => {
   const client = createClient({
@@ -183,7 +182,7 @@ const Post = ({ blog, data }) => {
                   </p>
                   <div className="flex items-center justify-center pt-5 md:justify-start">
                     <a href={data[0].githubLink}>
-                      <AiFillGithub className="text-2xl text-black hover:text-blue-500 duration-300 ease-linear" />
+                    <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
                     </a>
                     <a href={data[0].twitterLink} className="pl-4">
                       <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
