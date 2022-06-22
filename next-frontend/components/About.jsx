@@ -1,10 +1,7 @@
 import React from 'react'
-import {AiFillGithub} from 'react-icons/ai'
-import Zoom from 'react-reveal/Zoom';
 
 const About = ({ data }) => {
   return (
-    <Zoom>
     <div>
       <div className="bg-gray" id="about">
         <div className="container flex flex-col px-10  items-center py-16 md:py-20 lg:flex-row">
@@ -28,21 +25,21 @@ const About = ({ data }) => {
                 </div>
               </div>
               <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-              <a href={data[0].githubLink}>
-                    <AiFillGithub className="text-2xl text-black hover:text-blue-500"/>
-                  </a>
-                  <a href={data[0].twitterLink} className="pl-4">
-                    <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500"></i>
-                  </a>
-                  <a href="#" className="pl-4">
-                    <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500"></i>
-                  </a>
-                  <a href={data[0].linkedinLink} className="pl-4">
-                    <i className="bx bxl-linkedin text-2xl text-black hover:text-blue-500"></i>
-                  </a>
-                  <a href={data[0].instagramLink} className="pl-4">
-                    <i className="bx bxl-instagram text-2xl text-black hover:text-blue-500"></i>
-                  </a>
+                <a href={data[0].githubLink}>
+                  <i className="bx bx-chevron-right text-2xl text-primary"></i>
+                </a>
+                <a href={data[0].twitterLink} className="pl-4">
+                  <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500"></i>
+                </a>
+                <a href="#" className="pl-4">
+                  <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500"></i>
+                </a>
+                <a href={data[0].linkedinLink} className="pl-4">
+                  <i className="bx bxl-linkedin text-2xl text-black hover:text-blue-500"></i>
+                </a>
+                <a href={data[0].instagramLink} className="pl-4">
+                  <i className="bx bxl-instagram text-2xl text-black hover:text-blue-500"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -115,7 +112,6 @@ const About = ({ data }) => {
         </div>
       </div>
     </div>
-    </Zoom>
   )
 }
 

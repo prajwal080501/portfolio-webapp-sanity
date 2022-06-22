@@ -7,7 +7,6 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import imageUrlBuilder from "@sanity/image-url";
 import { Projects } from '../pages/Data/Data';
-import Bounce from 'react-reveal/Bounce';
 
 const Skills = ({ skills, builder }) => {
   return (
@@ -24,7 +23,6 @@ const Skills = ({ skills, builder }) => {
           {skills?.map((item) => {
             return (
               <>
-                <Bounce left>
                   <div className="group rounded-xl px-3 py-3 shadow-lg hover:bg-primary duration-200  cursor-pointer ease-linear">
                     <div>
                       <img src={builder.image(item.image).width(300).height(150)}
@@ -40,7 +38,6 @@ const Skills = ({ skills, builder }) => {
                     </div>
 
                   </div>
-                </Bounce>
               </>
 
 

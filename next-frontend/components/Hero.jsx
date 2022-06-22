@@ -8,7 +8,6 @@ import Script from "next/script";
 import { useEffect } from "react";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
-import { AiFillGithub } from 'react-icons/ai'
 import { motion } from "framer-motion"
 
 const Hero = ({ data, builder }) => {
@@ -73,7 +72,7 @@ const Hero = ({ data, builder }) => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                     href={data[0].githubLink}>
-                    <AiFillGithub className="text-2xl text-white hover:text-yellow" />
+                    <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
                   </motion.a>
                   <motion.a
                     inital={{ x: -100, opacity: 0 }}
