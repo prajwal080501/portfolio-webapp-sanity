@@ -9,12 +9,12 @@ const Projects = () => {
               Check out my Portfolio
             </h2>
             <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-              Here's what I have done with the past
+              Here&apos;s what I have done with the past
             </h3>
 
             <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
               <a
-                href="/"
+                href="#"
                 className="mx-auto transform transition-all hover:scale-105 md:mx-0"
               >
                 <img
@@ -24,7 +24,7 @@ const Projects = () => {
                 />
               </a>
               <a
-                href="/"
+                href="#"
                 className="mx-auto transform transition-all hover:scale-105 md:mx-0"
               >
                 <img
@@ -34,7 +34,7 @@ const Projects = () => {
                 />
               </a>
               <a
-                href="/"
+                href="#"
                 className="mx-auto transform transition-all hover:scale-105 md:mx-0"
               >
                 <img
@@ -44,7 +44,7 @@ const Projects = () => {
                 />
               </a>
               <a
-                href="/"
+                href="#"
                 className="mx-auto transform transition-all hover:scale-105 md:mx-0"
               >
                 <img

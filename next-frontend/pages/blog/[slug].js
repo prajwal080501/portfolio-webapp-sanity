@@ -27,7 +27,7 @@ const Post = ({ blog, data }) => {
         <Head>
           <meta charset="utf-8" />
 
-          <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+          <meta content="IE=edge,chrome=1" />
 
           <meta
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -65,7 +65,6 @@ const Post = ({ blog, data }) => {
           <meta name="twitter:site" content="@tailwindmade" />
 
           <link
-            crossorigin="crossorigin"
             href="https://fonts.gstatic.com"
             rel="preconnect"
           />
@@ -87,29 +86,30 @@ const Post = ({ blog, data }) => {
           />
 
           <link
-            crossorigin="anonymous"
             href="/assets/styles/main.min.css"
             media="screen"
             rel="stylesheet"
           />
 
-          <script
-            defer
-            src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
-          ></script>
 
-          <script
-            defer
-            src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-          ></script>
 
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"
           />
 
-          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
         </Head>
+        <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></Script>
+
+        <Script
+          defer
+          src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
+        ></Script>
+
+        <Script
+          defer
+          src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+        ></Script>
         <Navbar />
         <div className="mt-14">
           <div className="container py-6 md:py-10 mt-24 ">
@@ -127,7 +127,7 @@ const Post = ({ blog, data }) => {
                     />
                   </div>
                   <div className="pl-5">
-                    <span className="block font-body text-xl font-bold text-black font-bold">
+                    <span className="block font-body text-xl  text-black font-bold">
                       By {data[0].name}
                     </span>
                     <span className="block pt-1 font-body text-xl font-bold text-grey-30">
@@ -153,13 +153,13 @@ const Post = ({ blog, data }) => {
                 />
               </div>
               <div className="mt-10 flex justify-between border-t border-lila py-12">
-                <a href="/" className="flex items-center">
+                <a href="#" className="flex items-center">
                   <i className="bx bx-left-arrow-alt text-2xl text-primary"></i>
                   <span className="block pl-2 font-body text-lg font-bold uppercase text-primary md:pl-5">
                     Previous Post
                   </span>
                 </a>
-                <a href="/" className="flex items-center">
+                <a href="#" className="flex items-center">
                   <span className="block pr-2 font-body text-lg font-bold uppercase text-primary md:pr-5">
                     Next Post
                   </span>
@@ -182,21 +182,21 @@ const Post = ({ blog, data }) => {
                     {data[0].description}
                   </p>
                   <div className="flex items-center justify-center pt-5 md:justify-start">
-                  <a href={data[0].githubLink}>
-                    <AiFillGithub className="text-2xl text-black hover:text-blue-500 duration-300 ease-linear"/>
-                  </a>
-                  <a href={data[0].twitterLink} className="pl-4">
-                    <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
-                  </a>
-                  <a href="/" className="pl-4">
-                    <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
-                  </a>
-                  <a href={data[0].linkedinLink} className="pl-4">
-                    <i className="bx bxl-linkedin text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
-                  </a>
-                  <a href={data[0].instagramLink} className="pl-4">
-                    <i className="bx bxl-instagram text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
-                  </a>
+                    <a href={data[0].githubLink}>
+                      <AiFillGithub className="text-2xl text-black hover:text-blue-500 duration-300 ease-linear" />
+                    </a>
+                    <a href={data[0].twitterLink} className="pl-4">
+                      <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                    </a>
+                    <a href="#" className="pl-4">
+                      <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                    </a>
+                    <a href={data[0].linkedinLink} className="pl-4">
+                      <i className="bx bxl-linkedin text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                    </a>
+                    <a href={data[0].instagramLink} className="pl-4">
+                      <i className="bx bxl-instagram text-2xl text-black hover:text-blue-500 duration-300 ease-linear"></i>
+                    </a>
                   </div>
                 </div>
               </div>

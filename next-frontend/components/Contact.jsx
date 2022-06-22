@@ -6,7 +6,7 @@ const Contact = ({data}) => {
         
         <div className="container py-16 md:py-20" id="contact">
             <h2 className="text-center font-header text-4xl font-semibold  uppercase text-primary sm:text-5xl lg:text-6xl">
-              Here's a contact form
+              Here&apos;s a contact form
             </h2>
             <h4 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
               Have Any Questions?
@@ -87,7 +87,7 @@ const Contact = ({data}) => {
             className="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96  p-2 mb-3 ml-3 mr-3 rounded-xl shadow-lg"
             
           >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.274981308778!2d73.90661341457812!3d18.561637572762173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13ee7d72457%3A0x6a219f2c38e4a8e3!2sSakore%20Nagar%2C%20Viman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1655735878499!5m2!1sen!2sin" className='w-full h-full' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.274981308778!2d73.90661341457812!3d18.561637572762173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13ee7d72457%3A0x6a219f2c38e4a8e3!2sSakore%20Nagar%2C%20Viman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1655735878499!5m2!1sen!2sin" className='w-full h-full' allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <div
@@ -97,7 +97,7 @@ const Contact = ({data}) => {
             <div className="container relative z-30">
               <h3 className="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl">
                 Keep <span className="font-bold">up-to-date</span> <br />
-                with what I'm up to
+                with what I&apos;m up to
               </h3>
               <form className="mt-6 flex flex-col justify-center sm:flex-row">
                 <input

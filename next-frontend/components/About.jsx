@@ -13,7 +13,7 @@ const About = ({ data }) => {
               Who am I?
             </h2>
             <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-              I'm {data[0].name}, a Web Developer & Programmer
+              I&apos;m {data[0].name}, a Web Developer & Programmer
             </h4>
             <p className="pt-6 font-body leading-relaxed text-grey-20">
               {data[0].description}
@@ -34,7 +34,7 @@ const About = ({ data }) => {
                   <a href={data[0].twitterLink} className="pl-4">
                     <i className="bx bxl-twitter text-2xl text-black hover:text-blue-500"></i>
                   </a>
-                  <a href="/" className="pl-4">
+                  <a href="#" className="pl-4">
                     <i className="bx bxl-dribbble text-2xl text-black hover:text-blue-500"></i>
                   </a>
                   <a href={data[0].linkedinLink} className="pl-4">

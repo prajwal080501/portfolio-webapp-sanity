@@ -46,7 +46,7 @@ const Hero = ({ data, builder }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 2, delay: 0.5 }}
                 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
-                Hello I'm
+                Hello I&apos;m
                 <motion.span
                   initial={{ opacity: 0, x: -100, fontStyle:"normal" }}
                   animate={{ opacity: 1, x: 0, fontStyle:"bold" }}
@@ -61,7 +61,7 @@ const Hero = ({ data, builder }) => {
                 className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
                 <div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
                   <p className="font-body text-lg uppercase text-white">
-                    Let's connect
+                    Let&apos;s connect
                   </p>
                   <div className="hidden sm:block">
                     <i className="bx bx-chevron-right text-3xl text-yellow"></i>

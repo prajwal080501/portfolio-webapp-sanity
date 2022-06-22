@@ -15,7 +15,7 @@ const BlogSection = ({ blogs, data, builder }) => {
           <div className="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10">
             {blogs.map((item) => {
               return (
-                <div className="rounded-lg shadow-lg hover:scale-110 bg-white duration-100 ease-linear cursor-pointer">
+                <div key={item.slug.current} className="rounded-lg shadow-lg hover:scale-110 bg-white duration-100 ease-linear cursor-pointer">
                   <Link
                     key={item.slug.current}
                     href={"/blog/" + item.slug.current}

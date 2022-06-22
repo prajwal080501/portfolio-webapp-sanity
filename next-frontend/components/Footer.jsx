@@ -9,19 +9,19 @@ const Footer = () => {
             © Copyright 2022. All right reserved, Prajwal Ladkat
           </p>
           <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-            <a href="/">
+            <a href="#">
               <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
             </a>
-            <a href="/" className="pl-4">
+            <a href="#" className="pl-4">
               <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
             </a>
-            <a href="/" className="pl-4">
+            <a href="#" className="pl-4">
               <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
             </a>
-            <a href="/" className="pl-4">
+            <a href="#" className="pl-4">
               <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
             </a>
-            <a href="/" className="pl-4">
+            <a href="#" className="pl-4">
               <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
             </a>
           </div>
