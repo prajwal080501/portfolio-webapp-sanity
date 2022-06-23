@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 const Navbar = ({data}) => {
   return (
     <>
-      <div className="w-full z-50 py-3 sm:py-5  fixed top-0  bg-[#5540af] md:w-full mb-14">
-        <div className="w-full z-50 container flex items-center mt-0 mx-0 fixed top-0 justify-between  bg-[#5540af]  py-4 md:w-full ">
-          <div className="mx-12 flex items-center mb-3">
+      <div className="w-screen z-50 py-3 sm:py-5  fixed top-0  bg-white md:w-full mb-14">
+        <div className="w-screen z-50  flex items-center mt-0 mx-0 fixed top-0 justify-between  bg-[#5540af]  py-4 md:w-full ">
+          <div className="mx-12 flex items-center mb-3 sm:mr-5">
             <motion.a 
             initial={{y: -100, opacity: 0}}
             animate={{y: 0, opacity: 1}}
